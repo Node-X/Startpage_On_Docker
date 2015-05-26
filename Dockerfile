@@ -9,7 +9,7 @@ RUN echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" >> /etc/a
 ENV NGINX_VERSION 1.9.0-1~jessie
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates nginx=${NGINX_VERSION} && \
+    apt-get install -y ca-certificates nginx && \
     rm -rf /var/lib/apt/lists/*
 
 # forward request and error logs to docker log collector
